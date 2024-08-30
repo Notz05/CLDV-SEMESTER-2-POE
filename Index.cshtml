@@ -1,0 +1,124 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container mt-5">
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to ABC Retail Management</h1>
+        <p class="lead">Manage your products, customers, orders, and contracts all in one place.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Upload Product Image</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="UploadImage" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="productImage">Choose Image</label>
+                            <input type="file" class="form-control-file" id="productImage" name="file" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Add Customer Profile</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="AddCustomerProfile" method="post">
+                        <div class="form-group">
+                            <label for="customerName">Customer Name</label>
+                            <input type="text" class="form-control" id="customerName" name="profile.Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerEmail">Customer Email</label>
+                            <input type="email" class="form-control" id="customerEmail" name="profile.Email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Process Order</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="ProcessOrder" method="post">
+                        <div class="form-group">
+                            <label for="orderId">Order ID</label>
+                            <input type="text" class="form-control" id="orderId" name="orderId" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Process Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Upload Contract or Log</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="UploadContract" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="contractFile">Choose File</label>
+                            <input type="file" class="form-control-file" id="contractFile" name="file" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional: Custom CSS for further styling -->
+<style>
+    .jumbotron {
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        color: white;
+    }
+
+    .card {
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-header {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-success {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-warning {
+        background-color: #ffc107;
+        border-color: #ffc107;
+    }
+
+    .btn-info {
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+    }
+</style>
