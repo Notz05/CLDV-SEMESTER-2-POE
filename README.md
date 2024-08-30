@@ -103,3 +103,7 @@ Contributions are welcome! If you have suggestions or improvements, please follo
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+**Reference**
+Mrzyglod, K. (2022). Azure for Developers 2nd Edition. In K. Mrzyglod, Azure for Developers (p. 944). Birmingham: Pakt Publishing Ltd.
+
+
