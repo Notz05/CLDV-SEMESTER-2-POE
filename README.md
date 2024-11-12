@@ -112,7 +112,7 @@ Replicating the database to another region is important for:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/abc-retail-management.git
+    https://github.com/Notz05/CLDV-SEMESTER-2-POE.git
     ```
 2. Open the solution in **Visual Studio**.
 3. Ensure the **connection string** in `appsettings.json` is correctly set to your Azure SQL Database.
