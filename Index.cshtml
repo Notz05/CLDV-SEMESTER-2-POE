@@ -15,10 +15,14 @@
                     <h2>Upload Product Image</h2>
                 </div>
                 <div class="card-body">
-                    <form asp-action="UploadImage" method="post" enctype="multipart/form-data">
+                    <form asp-action="UploadProductImage" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <label for="productImage">Choose Image</label>
                             <input type="file" class="form-control-file" id="productImage" name="file" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productId">Product ID</label>
+                            <input type="text" class="form-control" id="productId" name="product.Id" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Upload</button>
                     </form>
@@ -41,6 +45,10 @@
                             <label for="customerEmail">Customer Email</label>
                             <input type="email" class="form-control" id="customerEmail" name="profile.Email" required>
                         </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Customer Phone</label>
+                            <input type="text" class="form-control" id="customerPhone" name="profile.PhoneNumber" required>
+                        </div>
                         <button type="submit" class="btn btn-primary">Add Profile</button>
                     </form>
                 </div>
@@ -58,7 +66,15 @@
                     <form asp-action="ProcessOrder" method="post">
                         <div class="form-group">
                             <label for="orderId">Order ID</label>
-                            <input type="text" class="form-control" id="orderId" name="orderId" required>
+                            <input type="text" class="form-control" id="orderId" name="order.OrderId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderAmount">Order Amount</label>
+                            <input type="number" class="form-control" id="orderAmount" name="order.Amount" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="orderDate">Order Date</label>
+                            <input type="date" class="form-control" id="orderDate" name="order.OrderDate" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Process Order</button>
                     </form>
@@ -76,6 +92,10 @@
                         <div class="form-group">
                             <label for="contractFile">Choose File</label>
                             <input type="file" class="form-control-file" id="contractFile" name="file" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contractId">Contract ID</label>
+                            <input type="text" class="form-control" id="contractId" name="contract.Id" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Upload</button>
                     </form>
