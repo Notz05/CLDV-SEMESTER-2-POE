@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "compute1": {
+      "group": "connections",
+      "type": "compute"
+    },
+    "secrets1": {
+      "type": "secrets"
+    },
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "ConnectionStrings:DefaultConnection",
+      "dynamicId": null
+    }
+  }
+}
